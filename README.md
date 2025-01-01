@@ -2,11 +2,11 @@
 
 # Install Kafka
 
-**see debiziumdemo project/postgres-kafka and uinversal-payload-generator for more info**
+See [installing kafka in local machine](https://github.com/dmrhimali/debeziumDemo/tree/main/postgres-kafka#debezium-kafka-on-local-mac) for details.
 
 ## With docker-compose.yml
 
-https://github.com/debezium/debezium-examples/blob/master/tutorial/docker-compose-postgres.yaml
+Run docker-compose:
 
 `docker-compose up zookeeper`
 
@@ -28,6 +28,8 @@ kafka          /docker-entrypoint.sh start     Up      8778/tcp, 0.0.0.0:9092->9
 zookeeper      /docker-entrypoint.sh start     Up      0.0.0.0:2181->2181/tcp, 0.0.0.0:2888->2888/tcp,
 ```
                                                      0.0.0.0:3888->3888/tcp, 8778/tcp, 9779/tcp
+
+                                                     
 check kafka-connect:
 `url -H "Accept:application/json" localhost:8083/`
 {"version":"2.4.0","commit":"77a89fcf8d7fa018","kafka_cluster_id":"4zDsU771QMS_rZQr8LHTkw"}%
