@@ -1,0 +1,16 @@
+{
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "plugin.name": "wal2json",
+    "database.hostname": "postgresdb",
+    "database.port": "5432",
+    "database.user": "genesisuser",
+    "database.password": "a1111111",
+    "database.dbname" : "genesis",
+    "database.server.name": "genesispostgres",
+    "table.whitelist": "public.member,public.sponsor,public.member_eligibility,public.sponsor_settings",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+}
